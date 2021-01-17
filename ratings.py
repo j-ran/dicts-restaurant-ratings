@@ -22,6 +22,7 @@ def restaurant_ratings(filename):
     user_restaurant = input("> ")
     user_score = input("Please provide restaurant score: ")
     # test the output: print([user_restaurant, user_score])
+# add the new name and rating to the existing list of names and ratings    
     restaurantnames_and_scores[user_restaurant] = user_score
 # alphabetize the list        
     sorted_list = sorted(restaurantnames_and_scores)
@@ -36,9 +37,6 @@ def restaurant_ratings(filename):
 #     Prompt the user for a restaurant score
 #     Store the new restaurant/rating in the dictionary
 #     Print all of the ratings in alphabetical order (including the new one, of course)
-
-
-
 
 
 restaurant_ratings("scores.txt")
