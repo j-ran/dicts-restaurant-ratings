@@ -8,9 +8,11 @@ def restaurant_ratings(filename):
     """
 # open file
     scores = open(filename)
+# make an empty dictionary    
     restaurantnames_and_scores = {}
     for line in scores:
         restaurant_info = line.rstrip().split(":")
+        # test the output: print(restaurant_info) – test the output 
 # unpack the list made with restaurant_info        
         restaurant_name, score = restaurant_info
 # define dict = {'Ministry Munchies': 1, 'The Porcupine': 5}        
@@ -19,10 +21,11 @@ def restaurant_ratings(filename):
     print("What restaurant would you like to rate?")
     user_restaurant = input("> ")
     user_score = input("Please provide restaurant score: ")
-    
+    # test the output: print([user_restaurant, user_score])
+    restaurantnames_and_scores[user_restaurant] = user_score
 # alphabetize the list        
     sorted_list = sorted(restaurantnames_and_scores)
-# for i in keysortedlist    
+# for i in sorted_list    
 # reference the dict pair
     for restaurant_name in sorted_list:
         print(f'{restaurant_name} is rated at {restaurantnames_and_scores[restaurant_name]}.')
